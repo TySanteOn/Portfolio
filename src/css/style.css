@@ -77,7 +77,7 @@ svg {
 .intro {
   margin-top: 10vh;
   background-image: url(../assets/header-foto-01.png);
-  height: 90vh;
+  height: 100vh;
   background-size: 150vw;
   background-position: 80% 0;
   background-repeat: no-repeat;
@@ -108,7 +108,8 @@ svg {
 
 .skills {
   position: relative;
-  /* align-items: end; */
+  align-items: center;
+  flex-direction: row-reverse;
 }
 
 .works::before {
@@ -133,7 +134,21 @@ svg {
   }
 }
 
-.st0 {
+.skills-video {
+  filter: saturate(.7);
+  position: relative;
+  transform: rotate(10deg);
+  margin-right: 10rem;
+}
+
+.skills-video::before {
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  background: radial-gradient(rgba(0, 0, 0, 0), var(--dark));
+}
+
+/* .st0 {
   fill: none;
   stroke: rgba(0, 0, 0, .02);
   stroke-width: 4;
@@ -145,7 +160,7 @@ svg {
   stroke: var(--reddish);
   stroke-width: 4;
   stroke-miterlimit: 10;
-}
+} */
 
 .works {
   background-color: var(--light);
