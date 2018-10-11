@@ -15,7 +15,7 @@ const Works = ({works}) => {
         </ul>
       </article>
       <article className="works-article">
-        <header>Web Designs</header>
+        <header>Web Developments</header>
         <ul className="works-lijst">
           {Object.keys(ListOfWorkTypes[1][1]).map(id => <Work key={id} workInfo={ListOfWorkTypes[1][1][id]} />)}
         </ul>

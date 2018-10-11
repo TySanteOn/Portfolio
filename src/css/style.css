@@ -159,13 +159,18 @@ svg {
   padding: 2rem 0;
 }
 
+.works-article header {
+  padding: 1rem 0;
+
+}
+
 .works-lijst {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 
-.works-lijst:nth-child(3n) {
+.works-lijst :nth-child(2) {
   margin: 0 1rem;
 }
 
