@@ -1,0 +1,38 @@
+{
+  "Design": {
+    "werk1": {
+      "naam": "Dagelijkse Kost",
+      "pic": "dagelijkse-kost.jpg",
+      "link": ""
+    }
+  },
+  "Web Development": {
+    "werk3": {
+      "naam": "Manneken Pis",
+      "pic": "manneken-pis.jpg",
+      "link": "http://student.howest.be/dante.verbauwhede/20172018/ma3/oyster/"
+    },
+    "werk4": {
+      "naam": "Vertio",
+      "pic": "vertigo.jpg",
+      "link": "http://student.howest.be/dante.verbauwhede/20172018/ma4/vertigo/"
+    }
+  },
+  "ArtWork": {
+    "werk2": {
+      "naam": "Poeti",
+      "pic": "poeti.jpg",
+      "link": "https://www.instagram.com/p/BjApw5wjGRJ/?taken-by=tysanteon"
+    },
+    "werk5": {
+      "naam": "Heads",
+      "pic": "heads.jpg",
+      "link": "https://www.instagram.com/p/BnhDuzaHON8/?taken-by=tysanteon"
+    },
+    "werk6": {
+      "naam": "Homo Habilis",
+      "pic": "habilis.jpg",
+      "link": "https://www.instagram.com/p/Bny48iYnwfr/?taken-by=tysanteon"
+    }
+  }
+}

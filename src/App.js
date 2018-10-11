@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import './App.css';
+import './css/style.css';
+import Header from './components/Header';
+import Homepage from './components/Homepage';
 
-import { Route, Switch, Link } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 class App extends Component {
+
   render() {
+    const {works} = this.props
     return (
-      <div className="App">
-        <header className="header">
-          <h1>
-            <Link to="/">TySO</Link>
-          </h1>
-        </header>
+      <div>
+        <Header />
         <main>
           <Switch>
-            <Route path="/" exact render={() => `<h2>hi</h2>`} />
+            <Route path="/" exact render={() => <Homepage works={works} />} />
           </Switch>
         </main>
       </div>
