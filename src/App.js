@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     const {works} = this.props
     return (
-      <div>
+      <div className="row">
         <Header />
         <main>
           <Switch>

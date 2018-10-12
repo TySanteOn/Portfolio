@@ -18,8 +18,16 @@ body {
   background-color: var(--dark);
   width: 100vw;
   height: 100vh;
-  font-size: 5vw;
+  font-size: 2.4rem;
   overflow-x: hidden;
+  position: relative;
+}
+
+main {
+  width: calc(100vw - 20rem);
+  height: 100vh;
+  position: absolute;
+  right: 0;
 }
 
 .hidden {
@@ -31,43 +39,61 @@ section {
 }
 
 h3 {
-  font-size: 12vw;
+  font-size: 6.5rem;
   color: var(--greenish);
-  margin-bottom: 4vw;
+  margin-bottom: 2rem;
 }
 
 p {
-  line-height: 8vw;
+  line-height: 4rem;
 }
 
 strong {
-  font-weight: 400;
-  color: var(--purpish);
+  font-weight: 800;
+  color: var(--reddish);
 }
 
-svg {
+/* svg {
   align-content: start;
-  width: 100vw;
-}
+  width: calc(100vw - 20rem);
+} */
 
 .row {
   display: flex;
   justify-content: space-between;
 }
 
-.header-ul {
-  width: 100vw;
-  position: fixed;
-  top: 0;
+.column {
   display: flex;
-  justify-content: space-between;
-  padding: 3vw 8vw;
-  z-index: 1;
-  transition: background-color .3s ease-in;
+  flex-direction: column;
+}
+
+.header {
+  width: 20rem;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  background-color: var(--light);
+  z-index: 3;
+  border-right: solid var(--dark) .2rem;
+}
+
+.header-ul {
+  display: flex;
+  height: 100vh;
+  color: var(--dark);
+  justify-content: space-evenly;
+  padding: 10rem 5rem;
+  z-index: 3;
+}
+
+.logo-in-header {
+  order: 1;
 }
 
 .header-li {
   padding-right: 4vw;
+  order: 2;
 }
 
 .header-li:hover {
@@ -77,11 +103,11 @@ svg {
 .intro {
   margin-top: 10vh;
   background-image: url(../assets/header-foto-01.png);
-  height: 100vh;
-  background-size: 150vw;
+  height: 90vh;
   background-position: 80% 0;
   background-repeat: no-repeat;
   position: relative;
+  background-size: contain;
 }
 
 .intro-titles {
@@ -91,13 +117,13 @@ svg {
 }
 
 .intro-title {
-  font-size: 12vw;
+  font-size: 6rem;
   font-weight: 600;
   color: var(--reddish);
 }
 
 .intro-subtitle {
-  font-size: 8vw;
+  font-size: 4rem;
   font-weight: 400;
 }
 
@@ -112,15 +138,9 @@ svg {
   flex-direction: row-reverse;
 }
 
-.works::before {
-  position: absolute;
-  content: '';
-  top: -19vw;
-  left: 0;
-  height: 20vw;
-  width: 100%;
-  background: url(../assets/skills.svg) top center no-repeat;
-}
+/* .skills-title {
+  text-align: end;
+} */
 
 .skills-stats-list {
   height: 40vh;
@@ -148,19 +168,16 @@ svg {
   background: radial-gradient(rgba(0, 0, 0, 0), var(--dark));
 }
 
-/* .st0 {
-  fill: none;
-  stroke: rgba(0, 0, 0, .02);
-  stroke-width: 4;
-  stroke-miterlimit: 10;
+.works::before {
+  position: absolute;
+  content: '';
+  top: -10vw;
+  right: 0;
+  height: 20vw;
+  width: calc(100vw - 18rem);
+  background: url(../assets/skills.svg) top center no-repeat;
+  z-index: -1;
 }
-
-.st1 {
-  fill: none;
-  stroke: var(--reddish);
-  stroke-width: 4;
-  stroke-miterlimit: 10;
-} */
 
 .works {
   background-color: var(--light);
@@ -180,32 +197,20 @@ svg {
 }
 
 .works-lijst {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.works-lijst :nth-child(2) {
-  margin: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
 }
 
 .works-list-item {
   height: auto;
   margin-bottom: 2vw;
-
-  & img {
-    width: 40vw;
-    height: 40vw;
-  }
-
-  & :nth-child(2n) {
-    margin: 0 1rem;
-  }
 }
 
 .works-list-pic {
   object-fit: cover;
   filter: saturate(.3);
+  width: 100%;
 }
 
 .works-list-pic:hover {
@@ -218,41 +223,40 @@ svg {
   text-align: center;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
 
   body {
-    font-size: 2.4rem;
+    font-size: 5vw;
   }
 
   h3 {
-    font-size: 6.5rem;
-    color: var(--greenish);
-    margin-bottom: 2rem;
+    font-size: 12vw;
+    margin-bottom: 4vw;
   }
 
   p {
-    line-height: 4rem;
+    line-height: 8vw;
   }
 
   .intro {
-    background-size: contain;
+    background-size: 150%;
   }
 
   .intro-title {
-    font-size: 6rem;
+    font-size: 12vw;
   }
 
   .intro-subtitle {
-    font-size: 4rem;
+    font-size: 8vw;
   }
 
 }
 
-@media screen and (min-width: 1020px) {
+/* @media screen and (min-width: 1020px) {
 
   .header-ul {
     display: flex;
-    /* justify-content: flex-start; */
+    justify-content: flex-start;
     align-items: center;
     padding: 1vw 8vw;
   }
@@ -271,7 +275,7 @@ svg {
       width: 25vw;
       height: 25vw;
     }
-  }
+  } */
 
   /* .skills {
     display: grid;
@@ -282,7 +286,7 @@ svg {
     & header {
       grid-area: skills-title;
     }
-  } */
+  } 
 
   .skills-stats {
     grid-area: skills-stats;
@@ -291,4 +295,4 @@ svg {
   .skills-tekst {
     grid-area: skills-tekst;
   }
-}
+}*/

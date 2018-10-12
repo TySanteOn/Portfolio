@@ -21,27 +21,32 @@ const parse = (data) => {
 };
 
 const onScrollHandler = e => {
-  const headerNav = document.querySelector(".header-ul");
-  if (window.scrollY > 50) {
-    headerNav.style.backgroundColor = "#191717";
-  } else {
-    headerNav.style.backgroundColor = "rgba(0,0,0,0)";
-  };
+  // const headerNav = document.querySelector(".header-ul");
+  // if (window.scrollY > 50) {
+  //   headerNav.style.backgroundColor = "#191717";
+  // } else {
+  //   headerNav.style.backgroundColor = "rgba(0,0,0,0)";
+  // };
 
   // console.log(e);
   // console.log(e.path[1].pageYOffset);
 
   const titles = document.querySelector(`.intro-titles`);
+  const headerImg = document.querySelector(`.intro`);
   if (titles) {
     const constant = 80;
     const scrolled = e.path[1].pageYOffset / 2;
-    // console.log(scrolled);
+    console.log(scrolled);
     const newXPos = (constant + scrolled)/10;
-    const xPosInString = newXPos.toString();
+    // const opacity = 1 - scrolled/200;
+    // console.log(opacity);
+    const backgroundXPos = 80 - scrolled/10;
 
-    // console.log(xPosInString);
+    headerImg.style.backgroundPosition = `${backgroundXPos}%`;
 
-    titles.style.left = `${xPosInString}vw`;
+    titles.style.left = `${newXPos}vw`;
+    // titles.style.opacity = opacity;
+    // headerImg.style.opacity = opacity;
   }
 };
 
