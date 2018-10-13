@@ -1,5 +1,5 @@
 import React from "react";
-import Work from "./Work"
+import Work from "./Work.jsx"
 
 const Works = ({works}) => {  
   const ListOfWorkTypes = works[0];

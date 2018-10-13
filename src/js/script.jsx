@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import App from './App.jsx';
+// import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter } from "react-router-dom";
 
 const works = [];
@@ -55,7 +55,6 @@ const writeApp = works => {
     <BrowserRouter>
       <App works={works} />
     </BrowserRouter> , document.getElementById('content'));
-  registerServiceWorker();
 };
 
 init();
