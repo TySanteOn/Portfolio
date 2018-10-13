@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header.jsx';
 import Homepage from './Homepage.jsx';
 
-import { Route, Switch } from "react-router-dom";
+// import { Route, Switch } from "react-router-dom";
 
 class App extends Component {
 
@@ -12,9 +12,7 @@ class App extends Component {
       <div className="row">
         <Header />
         <main>
-          <Switch>
-            <Route path="/" exact render={() => <Homepage works={works} />} />
-          </Switch>
+            <Homepage works={works} />
         </main>
       </div>
     );
