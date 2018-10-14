@@ -1,0 +1,311 @@
+@import 'reset.css';
+@import 'root.css';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: Avenir;
+  color: var(--light);
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+*,*::before,*::after {/* stylelint-disable-line */
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--dark);
+  width: 100vw;
+  height: 100vh;
+  font-size: 2.4rem;
+  overflow-x: hidden;
+  position: relative;
+}
+
+main {
+  width: calc(100vw - 20rem);
+  height: 100vh;
+  position: absolute;
+  right: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+section {
+  padding: 8vw;
+}
+
+h3 {
+  font-size: 6.5rem;
+  color: var(--greenish);
+  margin-bottom: 2rem;
+}
+
+p {
+  line-height: 4rem;
+}
+
+strong {
+  font-weight: 800;
+  color: var(--reddish);
+}
+
+/* svg {
+  align-content: start;
+  width: calc(100vw - 20rem);
+} */
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 20rem;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  background-color: var(--light);
+  z-index: 3;
+  border-right: solid var(--dark) .2rem;
+}
+
+.header-ul {
+  display: flex;
+  height: 100vh;
+  color: var(--dark);
+  justify-content: space-evenly;
+  padding: 10rem 5rem;
+  z-index: 3;
+}
+
+.logo-in-header {
+  order: 1;
+}
+
+.header-li {
+  padding-right: 4vw;
+  order: 2;
+}
+
+.header-li:hover {
+  color: var(--reddish);
+}
+
+.intro {
+  margin-top: 10vh;
+  background-image: url(../assets/header-foto-01.png);
+  height: 90vh;
+  background-position: 80% 0;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: contain;
+}
+
+.intro-titles {
+  position: absolute;
+  left: 8vw;
+  bottom: 10vh;
+}
+
+.intro-title {
+  font-size: 6rem;
+  font-weight: 600;
+  color: var(--reddish);
+}
+
+.intro-subtitle {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.hi {
+  margin-bottom: 20vw;
+  text-align: center;
+}
+
+.skills {
+  position: relative;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+/* .skills-title {
+  text-align: end;
+} */
+
+.skills-stats-list {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 15vw;
+
+  & dt {
+    margin-top: 2vh;
+  }
+}
+
+.skills-video {
+  filter: saturate(.7);
+  position: relative;
+  transform: rotate(10deg);
+  margin-right: 10rem;
+}
+
+.skills-video::before {
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  background: radial-gradient(rgba(0, 0, 0, 0), var(--dark));
+}
+
+.works::before {
+  position: absolute;
+  content: '';
+  top: -10vw;
+  right: 0;
+  height: 20vw;
+  width: calc(100vw - 18rem);
+  background: url(../assets/skills.svg) top center no-repeat;
+  z-index: -1;
+}
+
+.works {
+  background-color: var(--light);
+  color: var(--dark);
+  padding: 8vw;
+  position: relative;
+  padding-top: 0;
+}
+
+.works-article {
+  padding: 2rem 0;
+}
+
+.works-article header {
+  padding: 1rem 0;
+
+}
+
+.works-lijst {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.works-lijst li {
+  position: relative;
+  width: 100%;
+}
+
+.works-lijst li::after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.work {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.works-list-pic {
+  object-fit: cover;
+  filter: saturate(.3);
+  width: 100%;
+  height: 100%;
+}
+
+.works-list-pic:hover {
+  filter: saturate(.7);
+}
+
+.contact {
+  background-color: var(--light);
+  color: var(--dark);
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+
+  body {
+    font-size: 5vw;
+  }
+
+  h3 {
+    font-size: 12vw;
+    margin-bottom: 4vw;
+  }
+
+  p {
+    line-height: 8vw;
+  }
+
+  .intro {
+    background-size: 150%;
+  }
+
+  .intro-title {
+    font-size: 12vw;
+  }
+
+  .intro-subtitle {
+    font-size: 8vw;
+  }
+
+}
+
+/* @media screen and (min-width: 1020px) {
+
+  .header-ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1vw 8vw;
+  }
+
+  .header-li {
+    padding-right: 4rem;
+  }
+
+  .intro {
+    margin-top: 0;
+  }
+
+  .works-list-item {
+
+    & img {
+      width: 25vw;
+      height: 25vw;
+    }
+  } */
+
+/*.skills {
+    display: grid;
+    grid-template: auto auto / 1fr 1fr;
+    grid-template-areas: 'skills-title .' 'skills-stats skills-tekst';
+    grid-gap: 3rem;
+
+    & header {
+      grid-area: skills-title;
+    }
+  }
+
+  .skills-stats {
+    grid-area: skills-stats;
+  }
+
+  .skills-tekst {
+    grid-area: skills-tekst;
+  }
+}*/
